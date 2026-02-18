@@ -1,10 +1,6 @@
-pandas
-numpy
-scikit-learn
-nltk
-streamlit
-plotly
-matplotlib
-seaborn
-boto3
+streamlit==1.32.0
+altair==4.2.2
 twilio
+pandas
+scikit-learn
+matplotlib
