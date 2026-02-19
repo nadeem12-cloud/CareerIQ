@@ -296,6 +296,8 @@ with col_download:
 # 📲 WHATSAPP INSIGHT
 # =============================
 st.divider()
+st.markdown("Whatsapp Automation is Currently not avaliable as the app is still in Prototyping Phase")
+
 st.subheader("📲 Share Insight")
 
 if st.button("Send Insight to WhatsApp"):
