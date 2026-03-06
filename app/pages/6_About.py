@@ -1,11 +1,11 @@
 import streamlit as st
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.ui_components import inject_css, navbar, page_header
+from utils.ui_components import inject_css, sidebar_logo, page_header
 
-st.set_page_config(page_title="About – CareerIQ", page_icon="ℹ️", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="About – CareerIQ", page_icon="ℹ️", layout="wide")
 inject_css()
-navbar("About")
+sidebar_logo()
 
 page_header("◈", "About CareerIQ", "Data-driven job market intelligence for India's tech sector")
 

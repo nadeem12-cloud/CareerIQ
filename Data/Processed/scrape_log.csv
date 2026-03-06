@@ -1,0 +1,4 @@
+timestamp,new_records,total_records,queries,status
+2026-03-05 09:01:00,0,13623,5,no_new_data
+2026-03-05 09:27:35,0,13623,5,no_new_data
+2026-03-05 09:34:57,89,13712,5,success
