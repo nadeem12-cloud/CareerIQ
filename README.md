@@ -2,13 +2,19 @@
 
 > Real-time job market analytics for Data, AI, ML & Cloud roles across India.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app.streamlit.app)
+[![Streamlit App](https://img.shields.io/badge/Live-careeriq--mkv.streamlit.app-FF4B4B?style=flat-square&logo=streamlit)](https://careeriq-mkv.streamlit.app)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![RapidAPI](https://img.shields.io/badge/RapidAPI-0055DA?style=flat-square&logo=rapidapi&logoColor=white)
+![Twilio](https://img.shields.io/badge/Twilio-F22F46?style=flat-square&logo=twilio&logoColor=white)
 
 ---
 
 ## What is CareerIQ?
 
-CareerIQ turns raw LinkedIn job listing data into structured career intelligence. It helps students understand hiring demand, professionals identify skill gaps, and researchers observe market trends — all from a single unified platform.
+CareerIQ turns live LinkedIn job listing data into structured career intelligence. It helps students understand hiring demand, professionals identify skill gaps, and researchers observe market trends — all from a single unified platform.
 
 ---
 
@@ -18,9 +24,9 @@ CareerIQ turns raw LinkedIn job listing data into structured career intelligence
 |---|---|
 | 🏠 Home | KPI overview with live data freshness indicator |
 | 📊 Dashboard | Hiring trends, role demand, city distribution, experience breakdown |
-| 🔧 Skills Intelligence | Top skills per role with frequency charts & recommendations |
+| 🔧 Skills Intelligence | Top skills per role with frequency charts & career recommendations |
 | 📂 Data Explorer | Browse, filter and export the full job dataset as CSV |
-| 📲 WhatsApp Insight | Generate & send market reports via Twilio |
+| 📲 WhatsApp Insight | Generate & send market intelligence reports via Twilio |
 | 🔄 Data Refresh | Fetch fresh LinkedIn job listings on demand via JSearch API |
 
 ---
@@ -105,7 +111,7 @@ streamlit run app.py
 
 Navigate to **🔄 Data Refresh** in the app:
 
-- Click **🔬 Run API Test** to verify your key
+- Click **🔬 Run API Test** to verify your key is working
 - Click **🚀 Fetch Latest Jobs** to pull fresh listings
 - Each fetch pulls ~100 jobs (5 queries × 2 pages × ~10 jobs/page)
 - Free tier = 200 requests/month ≈ 5 full refreshes/month
@@ -119,7 +125,8 @@ Navigate to **🔄 Data Refresh** in the app:
 | Frontend | Streamlit |
 | Data Processing | Pandas |
 | Visualisation | Plotly Express |
-| Live Job Data | JSearch API (RapidAPI) |
+| Live Job Data | JSearch API via RapidAPI |
+| Web Scraping | BeautifulSoup, Requests |
 | WhatsApp | Twilio Sandbox |
 | Styling | Custom CSS — Space Mono + DM Sans |
 
@@ -128,7 +135,7 @@ Navigate to **🔄 Data Refresh** in the app:
 ## Architecture
 
 ```
-JSearch API → scraper.py → jobs_master.csv → data_loader.py → app.py
+JSearch API ──► scraper.py ──► jobs_master.csv ──► data_loader.py ──► app.py
 ```
 
 - All pages rendered inside a single `app.py` using `st.session_state` for navigation
